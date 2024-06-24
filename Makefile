@@ -30,11 +30,11 @@ install: default
 uninstall:
 	rm -f $(BINDIR)$(TARGET)
 
-$(BUILDDIR)%.o: %.c
+$(BUILDDIR)%.o: $(SRCDIR)%.c
 	@mkdir -p $(BUILDDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILDDIR)DEBUG_%.o: %.c
+$(BUILDDIR)DEBUG_%.o: $(SRCDIR)%.c
 	@mkdir -p $(BUILDDIR)
 	$(CC) $(CFLAGS_DEBUG) -c $< -o $@
 
