@@ -1,7 +1,7 @@
 # huffman
-An implementation of the Huffman code in C18.
+An implementation of the Huffman code in C17.
 ## Compatibility
-The code should work on any system that supports C18 and the `uint64_t` datatype, including MSb-first as bit numbering is expected. Big-endian and little-endian systems are cross-compatible, except when the decoded file contains only one byte type. The last requirement is a byte consisting of 8 bits.
+The code should work on any system that supports C17 and the `uint64_t` datatype, including MSb-first as bit numbering is expected. Big-endian and little-endian systems are cross-compatible, except when the decoded file contains only one byte type. The last requirement is a byte consisting of 8 bits.
 
 ## Building/Installation
 To compile the project, run `make`.  
