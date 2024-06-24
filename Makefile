@@ -3,6 +3,7 @@ CFLAGS := -O3 -pedantic-errors -std=c18
 CFLAGS_DEBUG := -Og -g -fsanitize=address -std=c18 -pedantic-errors -Wall
 DEPS := main huffman bitHandler
 BUILDDIR := build/
+SRCDIR := src/
 BINDIR := /usr/local/bin/
 TARGET := huffman
 TARGET_DEBUG := $(TARGET)
@@ -10,7 +11,7 @@ TARGET_DEBUG := $(TARGET)
 
 OBJS := $(addprefix $(BUILDDIR), $(addsuffix .o, $(DEPS)))
 OBJS_DEBUG := $(addprefix $(BUILDDIR)DEBUG_, $(addsuffix .o, $(DEPS)))
-SOURCE := $(addsuffix .c, $(DEPS))
+SOURCE := $(addprefix $(SRCDIR), $(addsuffix .c, $(DEPS)))
 
 default: $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET)
