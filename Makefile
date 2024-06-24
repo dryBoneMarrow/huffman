@@ -1,6 +1,6 @@
 CC := gcc
-CFLAGS := -O3 -pedantic-errors -std=c18
-CFLAGS_DEBUG := -Og -g -fsanitize=address -std=c18 -pedantic-errors -Wall
+CFLAGS := -O3 -pedantic-errors -std=c17
+CFLAGS_DEBUG := -Og -g -fsanitize=address -std=c17 -pedantic-errors -Wall
 DEPS := main huffman bitHandler
 BUILDDIR := build/
 SRCDIR := src/
