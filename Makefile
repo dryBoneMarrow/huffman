@@ -1,13 +1,12 @@
 CC := gcc
 CFLAGS := -O3 -pedantic-errors -std=c17
-CFLAGS_DEBUG := -Og -g -fsanitize=address -std=c17 -pedantic-errors -Wall
+CFLAGS_DEBUG := -Og -g -fsanitize:=address -std=c17 -pedantic-errors -Wall
 DEPS := main huffman bitHandler
 BUILDDIR := build/
 SRCDIR := src/
 BINDIR := /usr/local/bin/
 TARGET := huffman
 TARGET_DEBUG := $(TARGET)
-# TARGET_DEBUG := huffman_debug
 
 OBJS := $(addprefix $(BUILDDIR), $(addsuffix .o, $(DEPS)))
 OBJS_DEBUG := $(addprefix $(BUILDDIR)DEBUG_, $(addsuffix .o, $(DEPS)))
@@ -39,4 +38,4 @@ $(BUILDDIR)DEBUG_%.o: $(SRCDIR)%.c
 	$(CC) $(CFLAGS_DEBUG) -c $< -o $@
 
 
-.PHONY: default debug clean install
+.PHONY: default debug clean install uninstall
