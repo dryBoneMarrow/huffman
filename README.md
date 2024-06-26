@@ -13,7 +13,7 @@ $ huffman help
 Encodes and decodes data using huffman algorithm.
 
 Usage:
- huffman encode|decode [INFILE [OUTFILE]]
+ huffman (encode|decode) [INFILE [OUTFILE]]
  huffman help
 
 Note:

@@ -7,7 +7,7 @@ void printHelp()
     printf("\nEncodes and decodes data using huffman algorithm.\n\n"
 
            "Usage:\n"
-           " huffman encode|decode [INFILE [OUTFILE]]\n"
+           " huffman (encode|decode) [INFILE [OUTFILE]]\n"
            " huffman help\n\n"
 
            "Note:\n"
