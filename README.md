@@ -10,13 +10,14 @@ The Makefile needs to be modified for non linux systems, the resulting executabl
 ## Usage
 ```
 $ huffman help
+Encodes and decodes data using huffman algorithm.
+
 Usage:
- huffman [encode|decode] INFILE OUTFILE
- huffman [encode|decode] INFILE
- huffman [encode|decode|help]
+ huffman encode|decode [INFILE [OUTFILE]]
+ huffman help
 
 Note:
- - may be used for stdin/stdout
+ - may be used for stdin / stdout
  When omitting INFILE/OUTFILE, stdin/stdout is used
 ```
 
